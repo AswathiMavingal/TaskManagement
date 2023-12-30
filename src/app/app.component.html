@@ -1,0 +1,16 @@
+<app-header (sidebarToggle)="toggleSideNav()"></app-header>
+
+<main>
+  <app-side-nav
+    [isOpen]="isSidebarOpen"
+    [ngClass]="{ 'app-side-nav-open': isSidebarOpen }"
+  ></app-side-nav>
+  <div
+    class="display-area p-3"
+    [ngClass]="{ 'display-area-shrink': !isSidebarOpen }"
+  >
+    <router-outlet></router-outlet>
+
+    <!-- <p class="fs-1 fw-bold fst-italic">Main Display Area</p> -->
+  </div>
+</main>

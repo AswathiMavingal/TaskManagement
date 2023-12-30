@@ -1,0 +1,37 @@
+.side-nav-content {
+  width: 230px;
+}
+
+.nav-list {
+  /*exactly same as parent div*/
+  height: 100%;
+  padding: 0%;
+  margin-bottom: 0px;
+  list-style: none;
+}
+
+.nav-list-item {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.side-nav-open .nav-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+.nav-list-item i {
+  font-size: 20px;
+  height: 25px;
+  line-height: 25px; /*same as height to make it vertically center*/
+  width: 25px;
+  margin: 0px 15px 0px 10px;
+  text-align: center;
+}
+.nav-list-item span {
+  width: 170px;
+  text-transform: capitalize;
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,10 @@
+<div class="side-nav-content mx-auto mt-2 text-light">
+  <ul class="nav-list" [ngClass]="{ 'side-nav-open': isOpen }">
+    <li class="nav-list-item" *ngFor="let listItem of listItems">
+      <i class="{{ listItem.icon }}"></i>
+      <span>
+        <a class="text-white" href="">{{ listItem.title }}</a>
+      </span>
+    </li>
+  </ul>
+</div>
