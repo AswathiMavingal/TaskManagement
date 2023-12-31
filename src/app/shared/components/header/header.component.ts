@@ -5,6 +5,8 @@ import {
   Output,
   EventEmitter,
 } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/core/services/auth.service';
 // import {
 //   trigger,
 //   state,
@@ -41,9 +43,13 @@ export class HeaderComponent {
   //   this.showNav = !this.showNav;
   // }
   // onLogout() {}
+  constructor(private _authSrv: AuthService, private _router: Router) {}
   @Output() sidebarToggle = new EventEmitter<void>();
 
   toggleSideNav() {
     this.sidebarToggle.emit();
+  }
+  logout() {
+    this._authSrv.logout();
   }
 }
